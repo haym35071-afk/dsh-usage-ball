@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: DeepSeek 官方用量页
+    url: https://platform.deepseek.com/usage
+    about: 对账请以官方控制台为准
+  - name: DeepSeek 官方价目表
+    url: https://api-docs.deepseek.com/zh-cn/quick_start/pricing
+    about: 本工具的计价依据
