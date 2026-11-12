@@ -1,0 +1,41 @@
+name: 安装 / 启动问题
+description: 装不上、打不开、看不到小球
+title: "[Install] "
+labels: ["install"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        安装类问题最常见的是 SmartScreen 拦截、PowerShell 执行策略、DSH 没在运行。先看下面两条，能解决大部分。
+        - 提示「Windows 已保护你的电脑」→ 更多信息 → 仍要运行
+        - 小球不出现 → 确认 DeepSeek Harness 桌面版正在运行（小球只贴在它的窗口里）
+  - type: dropdown
+    id: stage
+    attributes:
+      label: 卡在哪一步
+      options:
+        - 下载后无法运行 / 被拦截
+        - 安装脚本报错
+        - 安装了但看不到小球
+        - 小球出现后又消失
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: detail
+    attributes:
+      label: 具体现象
+      description: 有报错请把原文贴上来
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: widget.log 最后 20 行（如果有）
+      description: 位于 %LOCALAPPDATA%\DshUsageBall\widget.log
+      render: text
+  - type: input
+    id: windows
+    attributes:
+      label: Windows 版本
+      placeholder: 例如 Windows 10 22H2
