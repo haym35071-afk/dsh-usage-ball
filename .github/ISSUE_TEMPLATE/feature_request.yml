@@ -1,0 +1,36 @@
+name: 功能建议
+description: 想要什么功能、哪里用得别扭
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        一句话说清“你想解决什么问题”比“加个按钮”更有用，谢谢！
+  - type: textarea
+    id: problem
+    attributes:
+      label: 你遇到什么问题
+      placeholder: 例如：我想知道每个模型分别花了多少，现在只有总数
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: 你希望怎么解决
+      placeholder: 例如：卡片里加一个“按模型”切换
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 对你的重要程度
+      options:
+        - 没有也能用
+        - 有点影响
+        - 很影响使用
+    validations:
+      required: true
+  - type: input
+    id: pay
+    attributes:
+      label: 如果这个功能收费，你能接受多少
+      placeholder: 例如 买断 ¥20 / 每月 ¥5 / 不愿意付费
