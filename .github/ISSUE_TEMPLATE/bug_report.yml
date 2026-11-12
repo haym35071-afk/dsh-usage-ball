@@ -1,0 +1,48 @@
+name: Bug 报告
+description: 用起来不对、显示不对、闪退等
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈！请尽量附上诊断信息，能大幅加快定位。
+  - type: textarea
+    id: what
+    attributes:
+      label: 发生了什么
+      description: 现象、你期望的结果
+      placeholder: 例如：点小球展开后卡片是空白的
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      placeholder: |
+        1. 启动 DSH
+        2. 双击桌面图标
+        3. 点小球
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows 版本
+      placeholder: 例如 Windows 11 23H2
+  - type: input
+    id: dsh
+    attributes:
+      label: DSH 版本
+      placeholder: 设置 → 通用 里的版本号，或 exe 属性
+  - type: textarea
+    id: log
+    attributes:
+      label: widget.log 最后 20 行
+      description: 位于 %LOCALAPPDATA%\DshUsageBall\widget.log
+      render: text
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: 截图（可选）
+      description: 直接把图片拖进来
